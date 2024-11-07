@@ -1,5 +1,5 @@
 package interfaces;
 
-public class Calculavel {
-
+public interface Calculavel {
+	double calcularMedia();
 }

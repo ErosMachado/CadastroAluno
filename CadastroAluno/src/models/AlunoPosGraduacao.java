@@ -1,10 +1,14 @@
 package models;
 
-public class AlunoPosGraduacao {
+public class AlunoPosGraduacao extends Aluno {
+    // Construtor
+    public AlunoPosGraduacao(String nome, String matricula, double nota1, double nota2) {
+        super(nome, matricula, nota1, nota2);
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+    // Implementação do método calcularMedia()
+    @Override
+    public double calcularMedia() {
+        return (getNota1() * 0.6) + (getNota2() * 0.4);
+    }
 }
